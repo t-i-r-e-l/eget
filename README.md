@@ -52,10 +52,10 @@ cd eget
 go mod download
 
 # Соберите сервер
-go build -o eget-server cmd/server/main.go
+go build -o eget-server server.go
 
 # Соберите клиент
-go build -o eget-client cmd/client/main.go
+go build -o eget-client client.go
 ```
 
 ## ⚙️ Конфигурация
