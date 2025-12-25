@@ -30,8 +30,8 @@ go build -o eget-client client.go
 ### Вариант 2: Установка через go install
 
 ```bash
-go install github.com/t-i-r-e-l/eget/server@latest
-go install github.com/t-i-r-e-l/eget/client@latest
+go install github.com/t-i-r-e-l/eget/cmd/server@latest
+go install github.com/t-i-r-e-l/eget/cmd/client@latest
 ```
 
 Бинарные файлы будут в `$GOPATH/bin` или `$HOME/go/bin`.
