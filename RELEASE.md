@@ -30,12 +30,7 @@ git push origin --tags
 
 ### Шаг 3: Проверьте установку
 
-После отправки тега, `@latest` должен заработать:
-
-```bash
-go install github.com/t-i-r-e-l/eget/cmd/server@latest
-go install github.com/t-i-r-e-l/eget/cmd/client@latest
-```
+После отправки тега, `@latest` должен заработать. См. инструкции по установке в [README.md](README.md) и [INSTALL.md](INSTALL.md).
 
 ## Создание релиза на GitHub (опционально)
 
@@ -84,10 +79,7 @@ git push origin :refs/tags/v1.0.0
 
 ### Установка
 
-```bash
-go install github.com/t-i-r-e-l/eget/cmd/server@latest
-go install github.com/t-i-r-e-l/eget/cmd/client@latest
-```
+См. инструкции по установке в [README.md](README.md) и [INSTALL.md](INSTALL.md).
 
 ### Документация
 
