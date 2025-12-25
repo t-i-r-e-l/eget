@@ -10,7 +10,7 @@
 
 ## Установка
 
-### Вариант 1: Сборка из исходников
+### Сборка из исходников
 
 ```bash
 # Клонируйте репозиторий
@@ -21,20 +21,11 @@ cd eget
 go mod download
 
 # Соберите сервер
-go build -o eget-server server.go
+go build -o eget-server cmd/server/main.go
 
 # Соберите клиент
-go build -o eget-client client.go
+go build -o eget-client cmd/client/main.go
 ```
-
-### Вариант 2: Установка через go install
-
-```bash
-go install github.com/t-i-r-e-l/eget/cmd/server@latest
-go install github.com/t-i-r-e-l/eget/cmd/client@latest
-```
-
-Бинарные файлы будут в `$GOPATH/bin` или `$HOME/go/bin`.
 
 ## Настройка сервера
 
