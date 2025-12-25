@@ -61,11 +61,15 @@ go build -o eget-client client.go
 ### Быстрая установка
 
 ```bash
+go install github.com/t-i-r-e-l/eget/cmd/server@latest
+go install github.com/t-i-r-e-l/eget/cmd/client@latest
+```
+
+**Альтернатива:** Если `@latest` не работает, используйте `@main`:
+```bash
 go install github.com/t-i-r-e-l/eget/cmd/server@main
 go install github.com/t-i-r-e-l/eget/cmd/client@main
 ```
-
-**Примечание:** Используйте `@main` для установки последней версии из основной ветки. После создания релизов можно будет использовать `@latest`.
 
 После установки бинарные файлы будут в `$GOPATH/bin` или `$HOME/go/bin`:
 - `server` (или `eget-server`)
