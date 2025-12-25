@@ -1,0 +1,52 @@
+# Бинарные файлы
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+eget-client
+eget-server
+client
+server
+
+# Тестовые файлы
+*.test
+*.out
+
+# Go workspace файл
+go.work
+
+# Логи
+*.log
+client.log
+server.log
+
+# Конфигурационные файлы с реальными ключами (не примеры)
+users.json
+config.json
+!config.example.json
+
+# Файлы списков доменов (если содержат чувствительные данные)
+domains.txt
+blocked-domains.bin
+!domains.example.txt
+
+# IDE файлы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS файлы
+.DS_Store
+Thumbs.db
+
+# Временные файлы
+*.tmp
+*.bak
+*.old
+
+
+
+

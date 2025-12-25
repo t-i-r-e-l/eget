@@ -1,0 +1,56 @@
+{
+  "_comment": "ВНИМАНИЕ: Это пример конфигурации. НЕ используйте эти ключи в продакшене! Генерируйте свои уникальные ключи командой: openssl rand -hex 16",
+  "users": {
+    "admin": "d9a4c1ed5b69875abcf15e1ef8ae8f37",
+    "user": "62130bd9c1538eef230ae41d100e91d2",
+    "tirel": "4e5f7a8b9c0d1e2f3a4b5c6d7e8f9a0b"
+  },
+
+  "static_path": "static/index.html",
+
+  "routing": {
+    "rules": [
+      {
+        "type": "exact",
+        "pattern": "2ip.ru",
+        "upstream": "socks5://127.0.0.1:1081"
+      },
+      {
+        "type": "suffix",
+        "pattern": ".google.com",
+        "upstream": "socks5://127.0.0.1:1082"
+      },
+      {
+        "type": "regex",
+        "pattern": ".*\\.(facebook|fbcdn)\\.com",
+        "upstream": "socks5://127.0.0.1:1083"
+      },
+      {
+        "type": "exact",
+        "pattern": "example.com",
+        "upstream": "eget://other-server:8080/tunnel?user=admin&key=d9a4c1ed5b69875abcf15e1ef8ae8f37"
+      },
+      {
+        "type": "suffix",
+        "pattern": ".blocked-site.com",
+        "upstream": "eget://backup-server:8080/tunnel?user=admin&key=d9a4c1ed5b69875abcf15e1ef8ae8f37"
+      },
+      {
+        "type": "regex",
+        "pattern": ".*\\.(tor|onion)",
+        "upstream": "direct"
+      },
+      {
+        "type": "list",
+        "list_file": "domains.txt",
+        "upstream": "socks5://127.0.0.1:1084"
+      },
+      {
+        "type": "list",
+        "list_file": "blocked-domains.bin",
+        "upstream": "eget://blocked-server:8080/tunnel?user=admin&key=d9a4c1ed5b69875abcf15e1ef8ae8f37"
+      }
+    ]
+  }
+}
+
