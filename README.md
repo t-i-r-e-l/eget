@@ -62,7 +62,7 @@ go build -o eget-client client.go
 
 ### Сервер
 
-Создайте файл `users.json` на основе `config.example.json`:
+Создайте файл `config.json` на основе `config.example.json`:
 
 ```json
 {
@@ -74,9 +74,9 @@ go build -o eget-client client.go
   "routing": {
     "rules": [
       {
-        "type": "exact",
-        "pattern": "example.com",
-        "upstream": "socks5://127.0.0.1:1081"
+        "type": "regex",
+        "pattern": ".*",
+        "upstream": "direct"
       }
     ]
   }
