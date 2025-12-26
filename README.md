@@ -100,7 +100,7 @@ openssl rand -hex 16
 ### Запуск сервера
 
 ```bash
-./eget-server -listen :8080 -config users.json
+./eget-server -listen :8080 -config config.json
 ```
 
 **Параметры сервера:**
